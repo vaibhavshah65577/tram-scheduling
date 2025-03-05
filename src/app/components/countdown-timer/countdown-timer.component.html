@@ -1,0 +1,17 @@
+{{ remainingTimer }}
+<div class="progress-track">
+  <div class="progress-track">
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="progress"></div>
+      <div
+        class="tram"
+        [style.left.%]="progress"
+        [style.transform]="progress >= 100 ? 'translateX(-100%)' : 'none'"
+      >
+        🚋
+      </div>
+    </div>
+    <span class="finish-line">🏁</span>
+  </div>
+</div>
+<p>{{ fortuneOfTram }}</p>
