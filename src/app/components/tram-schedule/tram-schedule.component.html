@@ -1,23 +1,23 @@
 <div class="container">
-  <h1>🚆 Tram Departures - Luma to Linde</h1>
+  <h1>🚋 Tram Departures: Luma → Linde</h1>
 
-  @if (tramsToLinde.length === 0) {
-  <p class="no-trams">No trams departing towards Linde at this time.</p>
-  } @if (tramsToLinde.length > 0) {
-  <table class="tram-table">
+  <app-tram-map></app-tram-map>
+  <p *ngIf="tramsToLinde.length === 0" class="no-trams">
+    No trams departing towards Linde at this time.
+  </p>
+
+  <table class="tram-table" *ngIf="tramsToLinde.length > 0">
     <thead>
       <tr>
         <th>Journey ID</th>
         <th>Destination</th>
         <th>Scheduled</th>
         <th>Expected</th>
-        <th>Journey State</th>
-        <th>Line</th>
+        <th>Live Status</th>
       </tr>
     </thead>
     <tbody>
-      @for (tram of tramsToLinde; track trackByTram) {
-      <tr>
+      <tr *ngFor="let tram of tramsToLinde; trackBy: trackByTram">
         <td>{{ tram.journey.id }}</td>
         <td>{{ tram.destination }}</td>
         <td>{{ tram.scheduled | date : 'shortTime' }}</td>
@@ -25,10 +25,7 @@
         <td>
           <app-countdown-timer [departureData]="tram"></app-countdown-timer>
         </td>
-        <td>{{ tram.line.group_of_lines || '-' }}</td>
       </tr>
-      }
     </tbody>
   </table>
-  }
 </div>

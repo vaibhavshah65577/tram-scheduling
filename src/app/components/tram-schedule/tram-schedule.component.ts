@@ -4,24 +4,22 @@ import { first } from 'rxjs';
 import { Departure } from '../../types/departures.types';
 import { CommonModule } from '@angular/common';
 import { CountdownTimerComponent } from '../countdown-timer/countdown-timer.component';
-
+import { TramMapComponent } from '../tram-map/tram-map.component';
 @Component({
   selector: 'app-tram-schedule',
-  imports: [CommonModule, CountdownTimerComponent],
+  imports: [CommonModule, CountdownTimerComponent, TramMapComponent],
   templateUrl: './tram-schedule.component.html',
   styleUrl: './tram-schedule.component.scss',
 })
 export class TramScheduleComponent {
   tramsToLinde: Departure[] = [];
+
   constructor(private scheduleService: ScheduleService) {}
 
   ngOnInit() {
     this.getDepartures();
   }
 
-  /**
-   * Get All Departures
-   */
   getDepartures() {
     this.scheduleService
       .getDepartures()
@@ -31,10 +29,6 @@ export class TramScheduleComponent {
       });
   }
 
-  /**
-   * Filter Departures based on
-   * @param departures
-   */
   filterDepartures(departures: Departure[]) {
     return departures.filter(
       (departure) =>
@@ -45,6 +39,6 @@ export class TramScheduleComponent {
   }
 
   trackByTram(index: number, tram: any): number {
-    return tram.journey.id; // Using a unique ID to track changes
+    return tram.journey.id;
   }
 }
