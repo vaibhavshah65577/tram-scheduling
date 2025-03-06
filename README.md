@@ -49,11 +49,11 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Useful Features 🚋
 
-    - 	Users can view the tram route from Sickla to Liljeholmen on the map.
-    - 	Users can check the real-time location of a specific tram using the Tram Route feature.
-    - 	Users can see the remaining time for a tram to arrive at Luma.
+    - Users can view the tram route from Sickla to Liljeholmen on the map.
+    - Users can check the real-time location of a specific tram using the Tram Route feature.
+    - Users can see the remaining time for a tram to arrive at Luma.
 
 ## Funny Features 😄
 
-    - 	Users can watch a tram progress bar race against the remaining time.
-    - 	Users will see funny messages based on the remaining time until the tram arrives at Luma
+    - Users can watch a tram progress bar race against the remaining time.
+    - Users will see funny messages based on the remaining time until the tram arrives at Luma
