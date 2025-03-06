@@ -43,7 +43,6 @@ export class TramRouteComponent {
    * Initializes the Leaflet map centered on the current tram location.
    */
   private initializeMap(): void {
-    console.log(this.dialogData?.tramData);
     this.map = L.map('tram-map').setView(this.getCurrentLatLong(), 14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(
       this.map,
