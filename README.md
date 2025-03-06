@@ -47,13 +47,13 @@ Once the server is running, open your browser and navigate to `http://localhost:
      - Updates the UI with the remaining time, progress percentage, and a motivational message.
      - Parses the display string to convert it into seconds for the countdown.
 
-## Useful Features 🚋
+## Useful Features
 
-- Users can view the tram route from Sickla to Liljeholmen on the map.
-- Users can check the real-time location of a specific tram using the Tram Route feature.
-- Users can see the remaining time for a tram to arrive at Luma.
+- **View Tram Route** – Users can see the tram route from **Sickla to Liljeholmen** on the map.
+- **Real-Time Tram Location** – Users can check the **real-time location** of a specific tram using the **Tram Route** feature.
+- **Arrival Countdown** – Users can track the **remaining time** for a tram to arrive at **Luma**.
 
-## Funny Features 😄
+## Funny Features
 
-- Users can watch a tram progress bar race against the remaining time.
-- Users will see funny messages based on the remaining time until the tram arrives at Luma
+- **Tram Progress Race** – Users can watch a **tram progress bar** race against the **remaining time**.
+- **Funny Arrival Messages** – Users will see **funny messages** based on the **remaining time** until the tram arrives at **Luma**.

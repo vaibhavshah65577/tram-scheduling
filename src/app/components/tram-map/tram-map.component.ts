@@ -104,12 +104,18 @@ export class TramMapComponent {
    * @param text The text to display on the banner.
    */
   private addBanner(coords: [number, number], text: string): void {
-    const banner = L.divIcon({
+    const customIcon = L.divIcon({
       className: 'custom-banner',
-      html: `<div class="banner">${text}</div>`,
-      iconSize: [150, 50],
+      html: `
+        <div class="banner-container">
+        <img class="marker-icon" src="https://freesvg.org/img/marker-red-optimized.png" alt="Marker">
+        <p class="floating-text">${text}</p>
+        </div>
+      `,
+      iconSize: [50, 60],
+      iconAnchor: [25, 60],
     });
 
-    L.marker(coords, { icon: banner }).addTo(this.map);
+    L.marker(coords, { icon: customIcon }).addTo(this.map);
   }
 }

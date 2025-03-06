@@ -1,24 +1,64 @@
 .custom-banner {
-background: transparent;
-border: none;
+  background: transparent;
+  border: none;
 }
 
-.banner {
-background-color: rgba(255, 165, 0, 0.9);
-color: white;
-padding: 10px;
-font-size: 16px;
-font-weight: bold;
-text-align: center;
-border-radius: 8px;
-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-width: 100px;
+html,
+body {
+  height: 100%;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
 
 .custom-dialog {
-    width: 900px!important;
-    height: 900px;
-    max-width: 900px!important;
+  width: 900px !important;
+  height: 900px;
+  max-width: 900px !important;
+  padding: 0 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.mat-mdc-dialog-surface {
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  h2 {
+    color: black !important;
+    background-color: transparent !important;
   }
+}
+
+.banner-container {
+  display: flex;
+  align-items: end;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &:hover .floating-text {
+    display: block;
+  }
+}
+
+.floating-text {
+  position: absolute;
+  top: -20px; /* Moves text above the pin */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.marker-icon {
+  width: 100% !important;
+  height: 40px;
+}
