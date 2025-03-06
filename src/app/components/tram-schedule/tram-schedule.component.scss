@@ -12,9 +12,18 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+
+  tbody tr {
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
 }
 
-.tram-table th, .tram-table td {
+.tram-table th,
+.tram-table td {
   border: 1px solid #ddd;
   padding: 8px;
 }

@@ -14,6 +14,7 @@
         <th>Scheduled</th>
         <th>Expected</th>
         <th>Live Status</th>
+        <th>Route Detail</th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,9 @@
         <td>{{ tram.expected | date : 'shortTime' }}</td>
         <td>
           <app-countdown-timer [departureData]="tram"></app-countdown-timer>
+        </td>
+        <td>
+          <button mat-flat-button (click)="openDialog(tram)">Tram Route</button>
         </td>
       </tr>
     </tbody>

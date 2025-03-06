@@ -1,1 +1,12 @@
-<div id="map"></div>
+@if (dialogData) {
+<h2 mat-dialog-title>Current Location</h2>
+<mat-dialog-content>
+  <ng-container *ngTemplateOutlet="mapContainer"></ng-container>
+</mat-dialog-content>
+} @else {
+<ng-container *ngTemplateOutlet="mapContainer"></ng-container>
+}
+
+<ng-template #mapContainer>
+  <div class="map" [id]="place"></div>
+</ng-template>

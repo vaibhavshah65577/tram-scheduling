@@ -14,3 +14,11 @@ border-radius: 8px;
 box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 width: 100px;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-dialog {
+    width: 900px!important;
+    height: 900px;
+    max-width: 900px!important;
+  }

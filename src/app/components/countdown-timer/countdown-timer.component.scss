@@ -1,44 +1,36 @@
-.tram-container {
-    margin-bottom: 15px;
-    padding: 10px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .progress-track {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-top: 5px;
-  }
-  
-  .progress-bar {
-    position: relative;
-    width: 90%;
-    height: 10px;
-    background: gray;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-right: 10px;
-    transition: background 0.5s;
-    overflow: visible; 
-  }
-  
-  .progress {
-    height: 100%;
-    background: #28a745;
-    transition: width 1s linear;
-  }
-  
-  .tram {
-    position: absolute;
-    top: -25px;
-    font-size: 40px; 
-    transition: left 1s linear;
-  }
-  
-  .finish-line {
-    font-size: 20px;
-  }
+.progress-track {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 90%;
+  height: 10px;
+  background: gray;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: background 0.5s;
+  overflow: visible;
+}
+
+.progress {
+  height: 100%;
+  background: #28a745;
+  transition: width 1s linear;
+}
+
+.tram {
+  position: absolute;
+  top: -25px;
+  font-size: 40px;
+  transition: left 1s linear;
+}
+
+.finish-line {
+  font-size: 20px;
+}

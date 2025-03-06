@@ -1,32 +1,30 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import * as L from 'leaflet';
+import { TRACK_COORDINATES } from '../../helper/constant';
+import { LatLngTuple } from 'leaflet';
 
 @Component({
   selector: 'app-tram-map',
-  imports: [],
+  imports: [MatDialogModule, CommonModule],
   templateUrl: './tram-map.component.html',
   styleUrl: './tram-map.component.scss',
 })
 export class TramMapComponent {
+  place = Math.random().toString();
   private map!: L.Map;
+  dialogData = inject<typeof MAT_DIALOG_DATA>(MAT_DIALOG_DATA, {
+    optional: true,
+  });
   private tramMarker!: L.Marker;
-  private trackCoordinates: L.LatLngExpression[] = [
-    [59.30655125485032, 18.115424876914542],
-    [59.30652204707724, 18.10795765778859],
-    [59.30212110595508, 18.1031511719144],
-    [59.30330902697854, 18.095941499710477],
-    [59.302106500446904, 18.08744431932576],
-    [59.29915112261593, 18.081693702297752],
-    [59.29347822063779, 18.07662967358663],
-    [59.29315193932303, 18.063411889954896],
-    [59.294622615876, 18.048820715515284],
-    [59.29626852997669, 18.03972272439628],
-    [59.2994237874927, 18.02890813117942],
-    [59.305952488315775, 18.026075737717846],
-    [59.31072772419747, 18.023929985095464],
-  ];
+  private trackCoordinates: LatLngTuple[] = TRACK_COORDINATES;
 
   ngAfterViewInit(): void {
+    this.setMapItems();
+  }
+
+  setMapItems() {
     this.initializeMap();
     this.drawTrack();
     this.startMovingTram();
@@ -38,7 +36,7 @@ export class TramMapComponent {
    * Initializes the map with a default view centered around a specific location.
    */
   private initializeMap(): void {
-    this.map = L.map('map').setView(
+    this.map = L.map(this.place).setView(
       [59.29915112261593, 18.081693702297752],
       14,
     );
