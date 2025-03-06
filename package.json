@@ -1,12 +1,13 @@
 {
-  "name": "angular19",
+  "name": "tram-schedule",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build": "ng build --configuration production",
+    "postbuild": "mv docs/browser/* docs/ && rm -rf docs/browser"
   },
   "private": true,
   "dependencies": {
